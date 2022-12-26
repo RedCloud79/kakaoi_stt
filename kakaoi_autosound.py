@@ -11,9 +11,9 @@ import json
 #- RAW PCM 포맷 :  PCM(Pulse code modulation)로 표현한 오디오 데이터를 압축하지 않은 RAW 형태(wav 등)
 
 #stt파트
-kakao_speech_url = "https://kakaoi-newtone-openapi.kakao.com/v1/recognize" #카카오 개발자서버연결
+kakao_speech_url = "https://kakaoi-newtone-openapi.kakao.com" #카카오 개발자서버연결 "https://developers.kakao.com/"
 
-rest_api_key = '1b547c7fe1240a9e7848988391faa360' # 카카오 개발자서버 연결 코드
+rest_api_key = 'API KEY CODE' # 카카오 개발자서버 연결 코드
 
 headers = {
     "Content-Type": "application/octet-stream",
