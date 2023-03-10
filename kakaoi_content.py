@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import print_function
 
 import pyaudio
@@ -8,6 +10,11 @@ import time
 
 GPIO.setmode (GPIO.BCM)
 GPIO.setup (17, GPIO.OUT)
+GPIO.setup (27, GPIO.OUT)
+GPIO.setup (22, GPIO.OUT)
+GPIO.setup (5, GPIO.OUT)
+GPIO.setup (6, GPIO.OUT)
+GPIO.setup (26, GPIO.OUT)
 
 from pydub import AudioSegment
 from kakaoi_autosound import *
@@ -19,10 +26,10 @@ SAMPLE_WIDTH = 2
 CHANNELS = 1
 RATE = 16000
 
-
-def record(record_seconds=3): # 5초간 녹음기 활성화
+# -*- coding: utf-8 -*-
+def record(record_seconds=3): # 3초간 녹음기 활성화
     p = pyaudio.PyAudio()
-    stream = p.open(input_device_index=11,
+    stream = p.open(input_device_index=10,
                     format=FORMAT,
                     channels=CHANNELS,
                     rate=RATE,
@@ -77,11 +84,34 @@ if __name__ == "__main__":
     if result.find('가디건') !=-1: #'가디건'이 들어왔을 때
         print('led on')
         GPIO.output(17, True) #LED를 켭니다.
-        time.sleep(1)
-    if result.find('불 꺼') !=-1: #'불꺼'가 들어왔을 때
-        print('led off')
+        time.sleep(5)
         GPIO.output(17, False) #LED를 끕니다.
-        time.sleep(1)
+    if result.find('스타킹') !=-1: #'스타킹'이 들어왔을 때
+        print('led on')
+        GPIO.output(27, True) #LED를 켭니다.
+        time.sleep(5)
+        GPIO.output(27, False)  # LED를 끕니다.
+    if result.find('레깅스') !=-1: #'레깅스'이 들어왔을 때
+        print('led on')
+        GPIO.output(22, True) #LED를 켭니다.
+        time.sleep(5)
+        GPIO.output(22, False)  # LED를 끕니다.
+    if result.find('청바지') !=-1: #'청바지'이 들어왔을 때
+        print('led on')
+        GPIO.output(5, True) #LED를 켭니다.
+        time.sleep(5)
+        GPIO.output(5, False)  # LED를 끕니다.
+    if result.find('목도리') !=-1: #'목도리'이 들어왔을 때
+        print('led on')
+        GPIO.output(6, True) #LED를 켭니다.
+        time.sleep(5)
+        GPIO.output(6, False)  # LED를 끕니다.
+    if result.find('반바지') !=-1: #'반바지'이 들어왔을 때
+        print('led on')
+        GPIO.output(26, True) #LED를 켭니다.
+        time.sleep(5)
+        GPIO.output(26, False)  # LED를 끕니다.
+        
         GPIO.cleanup()
 
 
