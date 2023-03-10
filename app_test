@@ -1,0 +1,61 @@
+################################
+##Generated with a lot of love##
+##    with   EasyPython       ##
+##Web site: easycoding.tn     ##
+################################
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)
+GPIO.setup(27, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(5, GPIO.OUT)
+GPIO.setup(6, GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
+Request = None
+
+class RequestHandler_httpd(BaseHTTPRequestHandler):
+  def do_GET(self):
+    global Request
+    messagetosend = bytes('Hello World',"utf")
+    self.send_response(200)
+    self.send_header('Content-Type', 'text/plain')
+    self.send_header('Content-Length', len(messagetosend))
+    self.end_headers()
+    self.wfile.write(messagetosend)
+    Request = self.requestline
+    Request = Request[5 : int(len(Request)-9)]
+    print(Request)
+    if Request == '가디건':
+      GPIO.output(17,True)
+      time.sleep(5)
+      GPIO.output(17,False)
+    if Request == '스타킹':
+      GPIO.output(27,True)
+      time.sleep(5)
+      GPIO.output(27,False)
+    if Request == '레깅스':
+      GPIO.output(22,True)
+      time.sleep(5)
+      GPIO.output(22,False)
+    if Request == '청바지':
+      GPIO.output(5,True)
+      time.sleep(5)
+      GPIO.output(5,False)
+    if Request == '목도리':
+      GPIO.output(6,True)
+      time.sleep(5)
+      GPIO.output(6,False)
+    if Request == '반바지':
+      GPIO.output(26,True)
+      time.sleep(5)
+      GPIO.output(26,False)
+    return
+
+
+server_address_httpd = ('192.168.0.27',5900)
+httpd = HTTPServer(server_address_httpd, RequestHandler_httpd)
+print('Starting server')
+httpd.serve_forever()
+GPIO.cleanup()
