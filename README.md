@@ -38,7 +38,7 @@
 > * 작품의 유,무선의 연결에 대한 전체적인 구성을 표현한 블록도이다.
 
 ### **작품 구조**
-<img width="100%" alt="작품의 구조" src="https://github.com/RedCloud79/kakaoi_stt/blob/main/%EC%9E%91%ED%92%88%EA%B5%AC%EC%A1%B0.PNG" />
+<img width="70%" alt="작품의 구조" src="https://github.com/RedCloud79/kakaoi_stt/blob/main/%EC%9E%91%ED%92%88%EA%B5%AC%EC%A1%B0.PNG" />
 
 > * 라프제리파이를 사용하여 led, usb마이크, button과 연결하였다.
 > * 어플과 ip통신을 하여 연결을 해놨으며, 해당값에 따라 동작을 한다.
