@@ -18,7 +18,8 @@
 > **주요 기능**   
 > > * kakao api를 활용한 음성인식 데이터 처리
 > > * 음성데이터를 활용한 하드웨어 제어
-> > * 간단한 구조의 어플을 활용한 하드웨어 제어
+> > * 간단한 구조의 어플을 활용한 하드웨어 제어   
+>
 > **참고 포트폴리오**
 > > * 링크 : https://drive.google.com/drive/folders/1Gude16PK_coomayESFHUlMIvitmLCzWT?usp=sharing
 
