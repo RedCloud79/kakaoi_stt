@@ -60,7 +60,7 @@
 > * 어플에서 보내오는 이름에 따른 led on/off의 동작을 수행한다.
 
 ### **어플 블록코딩**
-<img width="100%" alt="작품의 구조" src="https://github.com/RedCloud79/kakaoi_stt/blob/main/%EC%96%B4%ED%94%8C%20%EB%B8%94%EB%A1%9D%EC%BD%94%EB%94%A9.png" />
+<img width="70%" alt="작품의 구조" src="https://github.com/RedCloud79/kakaoi_stt/blob/main/%EC%96%B4%ED%94%8C%20%EB%B8%94%EB%A1%9D%EC%BD%94%EB%94%A9.png" />
 
 > * 어플 내부에서 송신하는 값을 확인할 수 있는 그림이다.
 > * 라즈베리파이에서 열어주는 서버를 통해서 지정 url값을 전송하여 led를 제어한다.
